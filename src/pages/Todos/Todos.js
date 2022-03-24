@@ -45,27 +45,25 @@ const Todos = () => {
   //
   const tableHeader = () => (
     <tr>
-      <th>ID</th>
+      <th width={30}>ID</th>
       <th>Todo</th>
+      <th>Actions</th>
     </tr>
   );
 
   const tableEmpty = () => (
     <tr>
-      <td colSpan={2} className="td-empty">No todos in the list</td>
+      <td colSpan={3} className="td-empty">No todos in the list</td>
     </tr>
   );
 
   const renderItem = ({item, index}) => (
     <tr key={`item-${index}`}>
-      <td width={30}>{index + 1}</td>
-      <td className="td-todo">
-        <p>{item}</p>
-        {/* actions */}
-        <div className="dv-actions">
-          <button onClick={() => onEditTodo(index)}>Edit</button>
-          <button className="ml-1" onClick={() => onRemove(index)}>Delete</button>
-        </div>
+      <td>{index + 1}</td>
+      <td>{item}</td>
+      <td className="td-action">
+          <button className="mr-1" onClick={() => onEditTodo(index)}>Edit</button>
+          <button onClick={() => onRemove(index)}>Delete</button>
       </td>
     </tr>
   );
