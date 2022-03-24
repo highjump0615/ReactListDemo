@@ -1,0 +1,22 @@
+.tb-list {
+  width: 100%;
+}
+
+/* border */
+.tb-list,
+.tb-list th,
+.tb-list td {
+  border: 1px solid #aaa;
+  border-collapse: collapse;
+}
+
+.tb-list thead {
+  background-color: #ccc;
+}
+.tb-list th {
+  padding: 6px 8px;
+  text-align: left;
+}
+.tb-list td {
+  padding: 4px 6px;
+}
