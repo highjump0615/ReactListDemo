@@ -1,5 +1,7 @@
 import {teams} from "../constants/dummy-data";
 import DataList from "../components/DataList/DataList";
+import ROUTES from "../constants/routes";
+import {Link} from "react-router-dom";
 
 const Teams = () => {
   const tableHeader = () => (
@@ -13,7 +15,7 @@ const Teams = () => {
   const renderItem = ({item, index}) => (
     <tr key={`item-${index}`}>
       <td>{item.id}</td>
-      <td>{item.name}</td>
+      <td><Link to={{pathname: ROUTES.MEMBERS, search: `?team=${item.id}`}}>{item.name}</Link></td>
       <td>{item.member_count}</td>
     </tr>
   );
