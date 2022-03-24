@@ -4,5 +4,14 @@
 }
 .fm-todo button[type="submit"] {
   align-self: flex-end;
-  margin-top: 0.8rem;
+  margin-top: .8rem;
+}
+
+.td-todo p {
+  margin: 0.4rem 0;
+  font-size: 0.9rem;
+}
+.td-todo .dv-actions {
+  float: right;
+  display: flex;
 }

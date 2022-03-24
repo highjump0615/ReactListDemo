@@ -20,6 +20,7 @@ const Modal = ({visible, onClose, children}) => {
   const onClickBg = (e) => {
     e.stopPropagation();
 
+    // close the modal when click outside
     if (e.target.className?.includes('dv-modal-container')) {
       onClose();
     }
