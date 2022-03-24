@@ -10,6 +10,10 @@
   flex: 1;
 }
 
+/* margins */
+.mb-1 {
+  margin-bottom: .5rem;
+}
 
 /* main content */
 .dv-main {

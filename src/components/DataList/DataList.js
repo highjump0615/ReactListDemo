@@ -1,11 +1,12 @@
 import "./styles.css"
+import _ from 'lodash';
 
 /**
  * Learned properties from FlatList component on React Native
  */
 
 
-const DataList = ({listHeaderComponent, data, renderItem}) => {
+const DataList = ({listHeaderComponent, emptyComponent, data, renderItem}) => {
   return (
     <table className="tb-list">
       <thead>
@@ -13,7 +14,11 @@ const DataList = ({listHeaderComponent, data, renderItem}) => {
       </thead>
 
       <tbody>
-      {data.map((item, index) => renderItem({item, index}))}
+      {_.isEmpty(data) ? (
+        emptyComponent
+      ) : (
+        data.map((item, index) => renderItem({item, index}))
+      )}
       </tbody>
     </table>
   );
